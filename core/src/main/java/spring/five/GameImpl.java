@@ -23,18 +23,21 @@ public class GameImpl implements Game{
 //        this.numberGenerator = numberGenerator;
 //    }
 
+    // == init ==
+    @PostConstruct
+    @Override
+    public void reset() {
+        smallest = 0;
+        guess = 0;
+        remainingGuesses = guessCount;
+        biggest = numberGenerator.getMaxNumber();
+        number = numberGenerator.next();
+        log.debug("the number is {}",number);
+    }
+
     // == public methods ==
     public void setNumberGenerator(NumberGenerator numberGenerator){
         this.numberGenerator = numberGenerator;
-    }
-    @Override
-    public void reset() {
-    smallest = 0;
-    guess = 0;
-    remainingGuesses = guessCount;
-    biggest = numberGenerator.getMaxNumber();
-    number = numberGenerator.next();
-    log.debug("the number is {}",number);
     }
 
     @Override
