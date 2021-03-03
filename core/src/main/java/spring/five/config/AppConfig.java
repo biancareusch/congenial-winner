@@ -1,10 +1,13 @@
-package spring.five;
+package spring.five.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import spring.five.*;
 
 @Configuration
+@Import(GameConfig.class)
 @ComponentScan(basePackages = "spring.five")
 public class AppConfig {
 //    == bean methods ==
