@@ -1,5 +1,7 @@
 package spring.five.console;
 
+import lombok.Getter;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,18 +14,20 @@ import spring.five.MessageGenerator;
 
 import java.util.Scanner;
 
+@Slf4j
 @Component
 public class ConsoleNumberGuess {
 
-    // == constants ==
-    private static final Logger log = LoggerFactory.getLogger(ConsoleNumberGuess.class);
-
     // == fields ==
-    @Autowired
-    private Game game;
+    private final Game game;
 
-    @Autowired
-    private MessageGenerator messageGenerator;
+    private final MessageGenerator messageGenerator;
+
+    // == constructor ==
+    public ConsoleNumberGuess(Game game, MessageGenerator messageGenerator) {
+        this.game = game;
+        this.messageGenerator = messageGenerator;
+    }
 
     // == events ==
     @EventListener(ContextRefreshedEvent.class)
