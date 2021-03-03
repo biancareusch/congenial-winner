@@ -1,4 +1,4 @@
-# congenial-winner
+# congenial-winner(Number Guessing Game)
 Multi module console game application using Maven, Spring Framework 5, Java, and Lombok.
 
 Used software project management tool, Maven, to manage build automation because
