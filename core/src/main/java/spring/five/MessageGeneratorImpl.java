@@ -30,7 +30,6 @@ public class MessageGeneratorImpl implements MessageGenerator{
                 game.getBiggest() +
                 ". Can you guess it?";
     }
-
     @Override
     public String getResultMessage(){
         if(game.isGameWon()){
