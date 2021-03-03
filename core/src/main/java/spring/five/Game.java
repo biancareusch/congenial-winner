@@ -11,6 +11,7 @@ public interface Game {
 
     int getBiggest();
     int getRemainingGuesses();
+    int getGuessCount();
     void reset();
     void check();
     boolean isValidNumberRange();

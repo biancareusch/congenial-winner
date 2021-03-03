@@ -77,7 +77,10 @@ public class GameImpl implements Game{
         return remainingGuesses;
     }
 
-
+    @Override
+    public int getGuessCount() {
+        return guessCount;
+    }
 
     @Override
     public void check() {
