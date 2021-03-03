@@ -2,6 +2,7 @@ package spring.five.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import spring.five.GuessCount;
@@ -9,6 +10,7 @@ import spring.five.MaxNumber;
 import spring.five.MinNumber;
 
 @Configuration
+@ComponentScan(basePackages = "spring.five")
 @PropertySource("classpath:config/game.properties")
 public class GameConfig {
 
