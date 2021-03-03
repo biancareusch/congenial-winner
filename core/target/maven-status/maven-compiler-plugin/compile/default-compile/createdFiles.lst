@@ -1,5 +1,7 @@
 spring/five/NumberGeneratorImpl.class
-spring/five/Main.class
 spring/five/Game.class
+spring/five/MessageGenerator.class
 spring/five/GameImpl.class
 spring/five/NumberGenerator.class
+spring/five/MessageGeneratorImpl.class
+spring/five/AppConfig.class
