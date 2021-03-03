@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import spring.five.GuessCount;
 import spring.five.MaxNumber;
+import spring.five.MinNumber;
 
 @Configuration
 @PropertySource("classpath:config/game.properties")
@@ -18,6 +19,9 @@ public class GameConfig {
     @Value("${game.guessCount:5}")
     private int guessCount;
 
+    @Value("${game.minNumber:0}")
+    private int minNumber;
+
     // == bean methods ==
     @Bean
     @MaxNumber
@@ -29,5 +33,11 @@ public class GameConfig {
     @GuessCount
     public int guessCount(){
         return guessCount;
+    }
+
+    @Bean
+    @MinNumber
+    public int minNumber(){
+        return minNumber;
     }
 }
