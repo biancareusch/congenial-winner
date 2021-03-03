@@ -28,6 +28,7 @@ public class MessageGeneratorImpl implements MessageGenerator{
         return "Number is between " +
                 game.getSmallest() +
                 " and " +
+                game.getBiggest() +
                 ". Can you guess it?";
     }
 
